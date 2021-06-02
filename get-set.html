@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moment JS</title>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+</head>
+<body>
+  <h1>All about Moment JS - Get / Set</h1>
+
+  <script>
+    let m = moment();
+
+    console.log('Before > ', m.toString())
+    
+    /* Getting units */
+    console.log(m.minutes())
+    console.log(m.hours())
+    console.log(m.week())
+    console.log(m.quarter())
+    console.log(m.get("quarter"))
+    
+    /* Setting units */
+    m.minutes(52)
+    m.hour(14)
+    m.week(4)
+    m.set('day', 4)
+    
+    console.log('After > ', m.toString())
+
+    /* min / max */
+    
+    const differentMoment = moment('2019-05-25')
+    console.log('min > ', moment.min(m, differentMoment).toString())
+    console.log('max > ', moment.max(m, differentMoment).toString())
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moment JS</title>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+</head>
+<body>
+  <h1>All about Moment JS - Manipulating</h1>
+
+  <script>
+    let m = moment();
+
+    console.log('Before > ', m.toString())
+    
+    // m.add(4, 'hours') // or m.add(4, 'h')
+
+    // m.add(4, 'hours').add(15, 'minutes')
+
+    // m.add({
+    //   'hours': 7,
+    //   'minutes': 15
+    // })
+
+    // m.subtract({
+    //   'hours': 7,
+    //   'minutes': 15
+    // })
+
+    // m.startOf('hour')
+
+    // m.startOf('year')
+
+    m.endOf('day')
+    
+    console.log('After > ', m.toString())
+    
+    m.utc()
+    console.log(m.toString())
+    console.log(m.utcOffset());
+    
+    m.local()
+    console.log(m.utcOffset());
+    
+    m.utcOffset(5)
+    m.utcOffset('+03:00')
+    m.utcOffset('-03:00')
+    
+    console.log(m.toString())
+
+  </script>
+</body>
+</html>

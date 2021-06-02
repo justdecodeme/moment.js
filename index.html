@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moment JS</title>
+  <script src="https://momentjs.com/downloads/moment.min.js"></script>
+</head>
+<body>
+  <h1>All about Moment JS - Basics</h1>
+
+  <script>
+    /*
+      Notes:
+      
+      0: Sunday
+    */
+
+    console.log('/* Current Date + Time */')
+    
+    let m = moment();
+
+    console.log(m)
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+    
+    /* *************************** */
+
+    console.log('/* Create from ISO 8601 string */')
+    
+    m = moment("2019-05-19")
+    
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+    
+    m = moment("2019-05-19T23:10:00.000")
+    
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+    
+    m = moment("2019-05-19T23:10:00.000+05:00")
+
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+
+    /* *************************** */
+
+    console.log('/* Using a format */')
+    
+    m = moment('14/06/2019 4:50PM', 'DD/MM/YYY h:mmA')
+
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+
+    /* *************************** */
+
+    console.log('/* Create using MILLISECONDS since epoch (since 1st Jan 1970) */')
+    
+    m = moment(600000)
+
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+
+    /* *************************** */
+
+    console.log('/* Create using SECONDS since epoch (since 1st Jan 1970) */')
+    
+    m = moment.unix(7200)
+
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+
+    /* *************************** */
+
+    console.log('/* Create a moment object in UTC mode */')
+    
+    m = moment.utc()
+
+    console.log(`toString() => ${m.toString()}`)
+    console.log(`toISOString() => ${m.toISOString()}`)
+  </script>
+</body>
+</html>
